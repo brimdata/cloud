@@ -31,16 +31,16 @@ the Brim Cloud.
 ## Using the Zed Lake
 
 You can access your Zed lake in the Brim cloud using
-* from your desktop using the [Brim app](https://github.com/brimdata/brim),
-* from the command-line using [zapi](https://github.com/brimdata/zed/blob/main/cmd/zed/api/command.go), or
-* from your Python using our
-[Python client](https://github.com/brimdata/zed/tree/main/python/zed).
+* from your desktop using [the Brim app](#the-brim-app)
+* from the command-line using [zapi CLI command](#the-cli)
+* from your Python using our[Python client](#the-python-client)
 
 For the configuration options below, we will assume the host name we provided
-you at signup is `acme.brimdata.io`.  Please substitute your actual host name.
+you at signup is `acme.brimdata.io`.  You substitute the DNS name we provided
+during your actual signup.
 
-We will have a test pool set up for you called "Welcome" with some dummy
-data in it.
+We will have a test pool set up for you called "Welcome" with
+some sample Zed data.
 
 ### The Brim App
 
@@ -48,18 +48,23 @@ To connect to the cloud from the Brim app, click on the
 
 XXX doc "Create Workspace..."
 
+You can import your Welcome Queries into the app's query library by
+downloading [queries.json](./queries.json) and importing it into
+the query library ()
+
 ### The CLI
 
-You can access all of the functionality exposed to the Brim App also through
-the `zed api` command, or `zapi` for short.  Type `zapi -h` to get online help.
+The `zed api` command (or `zapi` for short) lets you
+access all of the functionality exposed to the Brim App on the command line.
+Type `zapi -h` to get online help.
 
-You can use the `-host` argument to point to your cloud instance or set
-an environment variable:
+To use the Brim cloud with `zapi`, just use the `-host` argument
+to point to your cloud instance or set an environment variable:
 ```
 export ZED_LAKE_HOST=https://acme.brimdata.io
 ```
-Note that the service is available on the default SSL port rather than
-the `zed lake serve` default port of 9867.
+> Note that the service is available on the default SSL port rather than
+> the `zed lake serve` default port of 9867.
 
 Authenticate your lake connection using `zed auth`:
 ```
@@ -67,22 +72,16 @@ zed auth login
 ```
 Note that `zed auth` will store your secret credentials in `$HOME/.zed/credentials.json`.
 
-```
-zapi -host acme.brimdata.io query "from Welcome"
-```
-
 Once authenticated, check that the service is working
 by running a `query` command on your "welcome" data:
 ```
 zapi -host acme.brimdata.io query "from Welcome"
 ```
 > Note that you can delete the `Welcome` pool at any time.
-> It is just here to help out new users and you can always
+> It is just here to help you get started.  You can always
 > reproduce it by creating the pool and copying
-> [the data](welcome.zson) from this repo and optinally dragging the
+> [the data](welcome.zson) from this repo and optionally dragging the
 > [Welcome queries](queries.json) into your app's query library.
-
-> TBD: we should have a `zapi status` command to test the connection.
 
 ### The Python Client
 
