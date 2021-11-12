@@ -35,7 +35,7 @@ the Brim Cloud.
 You can access your Zed lake in the Brim cloud using
 * from your desktop using [the Brim app](#the-brim-app)
 * from the command-line using [zapi CLI command](#the-cli)
-* from your Python using our[Python client](#the-python-client)
+* from your Python using our [Python client](#the-python-client)
 
 For the configuration options below, we will assume the host name we provided
 you at signup is `yourlake.brimdata.io`.  You should substitute the DNS name
@@ -54,11 +54,12 @@ and click on _Add Workspace..._.
 
 Under the _Name_ input, provide a name for the lake connection that you would like
 appear in listing of available lakes.  Under the Host input, provide the URL
-of the lake service, in this case, `http://yourlake.brimdata.io`
+of the lake service, in this case, `https://yourlake.brimdata.io`
 
-You can import your Welcome Queries into the app's query library by
-downloading [queries.json](./queries.json) and importing it into
-your query library.  To import these queries, clieck on the `+` button
+You can import some sample queries relevant to the Welcome pools
+into the app's query library by
+downloading [queries.json](./queries.json).
+To import these queries into your query library, clieck on the `+` button
 in the **Queries** header in the lefthand panel and select _Import from JSON_.
 This will bring up a file finder and you can import the file you downloaded.
 
