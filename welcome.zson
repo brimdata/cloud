@@ -1,0 +1,42 @@
+{message:"Welcome to Brim!"}
+{message:"Brim uses the Zed data formats"}
+{message:"Zed natively supports a number of rich data types"}
+{message:"Here is an integer",value:1}
+{message:"Here is a float",value:1.5}
+{message:"Here is an unsigned 8-bit int", value: 1(uint8)}
+{message:"Here is a time", value: 2018-03-24T17:30:20.600852Z}
+{message:"Here is a duration", value: 2m30s}
+{message:"Here is an IP", value: 192.168.1.1}
+{message:"Here is a network", value: 192.168.1.0/24}
+{message:"Here is an array of int64", value: [1,2,3]}
+{message:"Here is an array of int32", value: [1(int32),2(int32),3(int32)]}
+//{message:"Here is a named set", value: |["PUT","GET","POST"]| (=HTTP_Methods)}
+{message:"Here is a map", value: |{"key1":"value1","key2":"value2"}|}
+{message:"Here a record inside a record", value: { a:1, r:{s1:"hello", s2:"world"}}}
+{message:"Zed also supports database tables"}
+{message:"Here is a table of 'sales employees'"}
+{name:"Kristen",city:"Chicago",phone:"9737287378",salary:150000.}(=employee)
+{name:"Russell",city:"Austin",phone:"9262738271",salary:200000.}(=employee)
+{name:"Denzel",city:"Boston",phone:"7353662627",salary:100000.}(=employee)
+{name:"Angelina",city:"Denver",phone:"9232673822",salary:600000.}(=employee)
+{name:"Robert",city:"Washington",phone:"9367238263",salary:350000.}(=employee)
+{name:"Christian",city:"Los Angeles",phone:"7253847382",salary:260000.}(=employee)
+{name:"Ed",city:"Los Angeles",phone:"7253847477",salary:185000.}(=employee)
+{name:"Julie",city:"Los Angeles",phone:"7253847477",salary:285000.}(=employee)
+{name:"Fred",city:"Austin",phone:"9262738801",salary:185000.}(=employee)
+{message:"Here is a table of the deals the sales team is working in"}
+{name:"Kristen",customer:"FedEx",forecast:150000.}(=deal)
+{name:"Kristen",customer:"Home Depot",forecast:100000.}(=deal)
+{name:"Kristen",customer:"Staples",forecast:200000.}(=deal)
+{name:"Rusell",customer:"DHS",forecast:100000.}(=deal)
+{name:"Rusell",customer:"IRS",forecast:100000.}(=deal)
+{name:"Denzel",customer:"Fidelity",forecast:500000.}(=deal)
+{name:"Angelina",customer:"Exxon",forecast:400000.}(=deal)
+{name:"Angelina",customer:"Shell",forecast:350000.}(=deal)
+{name:"Robert",customer:"ACME Hotels",forecast:175000.}(=deal)
+{name:"Robert",customer:"Smithsonian",forecast:100000.}(=deal)
+{name:"Christian",customer:"MOMA",forecast:50000.}(=deal)
+{name:"Ed",customer:"Lakers",forecast:75000.}(=deal)
+{name:"Julie",customer:"Disney",forecast:100000.}(=deal)
+{name:"Julie",customer:"Universal",forecast:100000.}(=deal)
+{name:"Fred",customer:"Dell",forecast:150000.}(=deal)
