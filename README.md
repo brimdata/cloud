@@ -10,7 +10,7 @@ and are now building a cloud service to provide an easy-to-use
 Let us know if you would like to be a pre-alpha tester, free of charge.
 You will be helping us build out our cloud product and your participation
 will be greatly appreciated.
-To sign up for the pre-alpha test, please email us at cloud@brimdata.io
+To sign up for the pre-alpha test, please email us at cloud-alpha@brimdata.io
 and we'll get the conversation going.
 
 ## Signing Up
