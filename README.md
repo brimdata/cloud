@@ -45,6 +45,8 @@ data in it.
 
 ### The Brim App
 
+To connect to the cloud from the Brim app, click on the
+
 XXX doc "Create Workspace..."
 
 ### The CLI
@@ -55,22 +57,55 @@ the `zed api` command, or `zapi` for short.  Type `zapi -h` to get online help.
 You can use the `-host` argument to point to your cloud instance or set
 an environment variable:
 ```
-export ZED_LAKE_HOST=acme.brimdata.io
+export ZED_LAKE_HOST=https://acme.brimdata.io
 ```
+Note that the service is available on the default SSL port rather than
+the `zed lake serve` default port of 9867.
 
-To check that the service is working, you can run the `query` command on the
-`Welcome` pool:
+Authenticate your lake connection using `zed auth`:
+```
+zed auth login
+```
+Note that `zed auth` will store your secret credentials in `$HOME/.zed/credentials.json`.
+
 ```
 zapi -host acme.brimdata.io query "from Welcome"
 ```
+
+Once authenticated, check that the service is working
+by running a `query` command on your "welcome" data:
+```
+zapi -host acme.brimdata.io query "from Welcome"
+```
+> Note that you can delete the `Welcome` pool at any time.
+> It is just here to help out new users and you can always
+> reproduce it by creating the pool and copying
+> [the data](welcome.zson) from this repo and optinally dragging the
+> [Welcome queries](queries.json) into your app's query library.
 
 > TBD: we should have a `zapi status` command to test the connection.
 
 ### The Python Client
 
-XXX noah
+To access your lake via the Python client, first authenticate as described
+above using `zapi auth` as the Python client requires access to your login
+credentials stored in `$HOME/.zed/credentials.json`.
+
+If you haven't installed the Python `zed` module, run
+```
+pip3 install "git+https://github.com/brimdata/zed#subdirectory=python/zed"
+```
+Run a test by creating a pool, loading data from Python, and reading it back:
+```
+import zed
+c = zed.Client('https://acme.brimdata.io')
+c.create_pool('test')
+c.load('test', '{a:1}{a:2}{a:3}')
+for v in c.query('from test'):
+  print(v)
+```
 
 ## Support
 
-If you run into problems or have questions, the easiest way to reach us
-is on our public [Slack channel](https://www.brimdata.io/join-slack).
+If you run into problems or have questions, please reach out to us
+on our public [Slack channel](https://www.brimdata.io/join-slack).
