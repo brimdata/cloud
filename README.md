@@ -33,9 +33,8 @@ the Brim Cloud.
 You can access your Zed lake in the Brim cloud using
 * from your desktop using the [Brim app](https://github.com/brimdata/brim),
 * from the command-line using [zapi](https://github.com/brimdata/zed/blob/main/cmd/zed/api/command.go), or
-* from your Python using our [Python client].
-
-> TBD: we need a docs page for zed/zq/zapi etc.
+* from your Python using our
+[Python client](https://github.com/brimdata/zed/tree/main/python/zed).
 
 For the configuration options below, we will assume the host name we provided
 you at signup is `acme.brimdata.io`.  Please substitute your actual host name.
