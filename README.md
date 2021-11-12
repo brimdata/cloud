@@ -8,12 +8,14 @@ and are now building a cloud service to provide an easy-to-use
 [Zed lake](https://github.com/brimdata/zed/tree/main/docs/lake).
 
 Let us know if you would like to be a pre-alpha tester, free of charge.
-You will have the noble reputation of helping us build out our cloud product.
-If so, please email us at cloud@brimdata.io and we'll get the conversation going.
+You will be helping us build out our cloud product and your participation
+will be greatly appreciated.
+To sign up for the pre-alpha test, please email us at cloud@brimdata.io
+and we'll get the conversation going.
 
 ## Signing Up
 
-When you sign up, you will provide us your prefered email
+When you sign up, you will provide us your preferred email
 and we will enable your access via [auth0](https://auth0.com/).
 You will get a standard account registration email from auth0
 to establish your account.
