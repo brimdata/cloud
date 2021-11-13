@@ -1,0 +1,116 @@
+{
+  "isOpen": true,
+  "items": [
+    {
+      "id": "VjNiaVO_jsjUTtEUAO9UW",
+      "value": "fuse",
+      "name": "As Table",
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "OJ2eylOjosI-F_2L3ZJaV",
+      "value": "value > 1",
+      "name": "Bigger Than One",
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "nsVO3j0PTWYsR-ODn1ee3",
+      "value": "2",
+      "name": "Find all Two's",
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "7jFHLNh1pPRM3DkVngmkW",
+      "value": "has(len(value)) | put LEN:=len(value) | fuse",
+      "name": "Lengthy Values",
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "Q6yP2dpjco9IHrBN2Xu89",
+      "value": "Kristen",
+      "name": "Search Kristen",
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "PHmcr8pBuwu-7cGEl_iP7",
+      "value": "Kristen | cut phone",
+      "name": "Kristen's Number",
+      "description": "",
+      "tags": []
+    },
+    {
+      "id": "dmy4pCa3a7EDsQg4hHVGd",
+      "value": "people:=union(name) by city",
+      "name": "People by City",
+      "description": "",
+      "tags": []
+    },
+    {
+      "isOpen": false,
+      "items": [],
+      "name": "SQL",
+      "id": "vNOoHPLGsZf6G8jkB-DGj"
+    },
+    {
+      "id": "9o1h8zbNkH_ODzAkjBfxF",
+      "value": "SELECT * FROM employee",
+      "name": "All Employees",
+      "description": "",
+      "tags": [
+        "relational"
+      ]
+    },
+    {
+      "id": "J9_MCs4BN4V-C6uxKstSx",
+      "value": "SELECT name,salary FROM employee WHERE salary >= 250000 ORDER by salary DESC",
+      "name": "Highest Paid",
+      "description": "",
+      "tags": [
+        "relational"
+      ]
+    },
+    {
+      "id": "wcQcyctgacbHqonLSwTPz",
+      "value": "SELECT * FROM deal",
+      "name": "All Deals",
+      "description": "",
+      "tags": [
+        "relational"
+      ]
+    },
+    {
+      "id": "IXtg593qI1gvDCYtzCm1v",
+      "value": "SELECT name, sum(forecast) as forecast FROM deal GROUP BY name ORDER BY forecast DESC",
+      "name": "Top Forecast",
+      "description": "",
+      "tags": [
+        "relational"
+      ]
+    },
+    {
+      "id": "4dHtmFsbyM9b57_BHpCRV",
+      "value": "SELECT name, union(forecast) as deals, sum(forecast) as total FROM deal GROUP BY name ORDER BY total DESC",
+      "name": "Detailed Forecast",
+      "description": "",
+      "tags": [
+        "relational"
+      ]
+    },
+    {
+      "id": "v_uvvbyyCoJOddoRO0Gcv",
+      "value": "SELECT d.customer as customer, d.name AS name, e.phone as phone FROM deal d JOIN employee e ON d.name=e.name",
+      "name": "Contact for Customer (JOIN)",
+      "description": "",
+      "tags": [
+        "relational"
+      ]
+    }
+  ],
+  "name": "Welcome",
+  "id": "NFTBp3dhh3ZWOZKTNuGq8"
+}

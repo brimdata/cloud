@@ -48,9 +48,7 @@ with some sample Zed data.
 
 To connect to the cloud from the Brim app, click on the lake dropdown
 in the upper left area of the window where you see the down carrot
-and click on _Add Workspace..._.
-
-> NOTE we are changing this to "Add Lake"
+and click on _Add Lake..._.
 
 Under the _Name_ input, provide a name for the lake connection that you would like
 appear in listing of available lakes.  Under the Host input, provide the URL
@@ -122,6 +120,21 @@ c.load('test', '{a:1}{a:2}{a:3}')
 for v in c.query('from test'):
   print(v)
 ```
+
+## Performance Caveats
+
+If you do many small loads, the queries will run slow because the current
+lake implementation does not yet implement the planned design.  See
+[issue 2936](https://github.com/brimdata/zed/issues/2936).
+
+Compaction is coming soon.
+
+If you pull very large result sets down into the Python client, the network
+transfer using ZJSON will run much slower than ZNG.  (We plan to add native
+ZNG support to the Python client but it's not yet implemented.)  If you want
+to retrieve large data sets from your Zed lake it's best to use `zapi query`,
+which defaults to the ZNG format (unless you send the output to a terminal,
+in which case the textual ZSON format is default).
 
 ## Support
 
