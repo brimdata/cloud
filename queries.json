@@ -24,8 +24,8 @@
     },
     {
       "id": "7jFHLNh1pPRM3DkVngmkW",
-      "value": "has(len(value)) | put LEN:=len(value) | fuse",
-      "name": "Lengthy Values",
+      "value": "has(len(value)) | len:=len(value) | fuse",
+      "name": "Values with Lengths",
       "description": "",
       "tags": []
     },
