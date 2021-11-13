@@ -1,18 +1,18 @@
 {id:0,message:"Welcome to Brim!"}
-{id:1,message:"Brim uses the Zed data formats"}
-{id:2,message:"Zed natively supports a number of rich data types"}
-{id:3,message:"Here is an integer",value:1}
-{id:4,message:"Here is a float",value:1.5}
-{id:5,message:"Here is an unsigned 8-bit int", value: 1(uint8)}
+{id:1,message:"Brim uses super-structured data enabled by the Zed formats family."}
+{id:1,message:"This data illustrates the Zed type system."}
+{id:3,message:"Here is an integer:",value:1}
+{id:4,message:"Here is a float:",value:1.5}
+{id:5,message:"Here is an unsigned 8-bit int:", value: 1(uint8)}
 {id:6,message:"Here is a time", value: 2018-03-24T17:30:20.600852Z}
-{id:7,message:"Here is a duration", value: 2m30s}
-{id:8,message:"Here is an IP", value: 192.168.1.1}
-{id:9,message:"Here is a network", value: 192.168.1.0/24}
-{id:10,message:"Here is an array of int64", value: [1,2,3]}
-{id:11,message:"Here is an array of int32", value: [1(int32),2(int32),3(int32)]}
-{id:12,message:"Here is a named set", value: |["PUT","GET","POST"]| (=HTTP_Methods)}
-{id:13,message:"Here is a map", value: |{"key1":"value1","key2":"value2"}|}
-{id:14,message:"Here a record inside a record", value: { a:1, r:{s1:"hello", s2:"world"}}}
+{id:7,message:"Here is a duration:", value: 2m30s}
+{id:8,message:"Here is an IP:", value: 192.168.1.1}
+{id:9,message:"Here is a network:", value: 192.168.1.0/24}
+{id:10,message:"Here is an array of int64:", value: [1,2,3]}
+{id:11,message:"Here is an array of int32:", value: [1(int32),2(int32),3(int32)]}
+{id:12,message:"Here is a named set:", value: |["PUT","GET","POST"]| (=HTTP_Methods)}
+{id:13,message:"Here is a map:", value: |{"key1":"value1","key2":"value2"}|}
+{id:14,message:"Here a record inside a record:", value: { a:1, r:{s1:"hello", s2:"world"}}}
 {id:15,message:"Zed also supports database tables"}
 {id:16,message:"Below are tables... 'employee' and 'deal'"}
 {name:"Kristen",city:"Chicago",phone:"9737287378",salary:150000.}(=employee)

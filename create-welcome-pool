@@ -1,0 +1,3 @@
+#!/bin/bash
+zapi create -orderby id WelcomeX
+zapi load -use WelcomeX@main welcome.zson

@@ -51,6 +51,13 @@
       "tags": []
     },
     {
+      "id": "LS8TE4pk7kB9_-RxyrWa-",
+      "value": "count() by shape:=typeof(this) | sort -r count",
+      "name": "Shapes",
+      "description": "",
+      "tags": []
+    },
+    {
       "isOpen": false,
       "items": [],
       "name": "SQL",
