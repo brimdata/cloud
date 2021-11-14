@@ -4,7 +4,7 @@
 {id:3,message:"Here is an integer:",value:1}
 {id:4,message:"Here is a float:",value:1.5}
 {id:5,message:"Here is an unsigned 8-bit int:", value: 1(uint8)}
-{id:6,message:"Here is a time", value: 2018-03-24T17:30:20.600852Z}
+{id:6,message:"Here is a time:", value: 2018-03-24T17:30:20.600852Z}
 {id:7,message:"Here is a duration:", value: 2m30s}
 {id:8,message:"Here is an IP:", value: 192.168.1.1}
 {id:9,message:"Here is a network:", value: 192.168.1.0/24}
