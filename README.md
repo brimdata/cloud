@@ -46,6 +46,11 @@ with some sample Zed data.
 
 ### The Brim App
 
+The Brim App can communicate with and switch between different instances
+of Zed lakes, including the local Zed lake it automatically launches
+on `localhost`.  Cloud connections are a bit like Slack's teams, where Slack
+lets you easily switch between teams.
+
 To connect to the cloud from the Brim app, click on the lake dropdown
 in the upper left area of the window where you see the down carrot
 and click on _Add Lake..._.
