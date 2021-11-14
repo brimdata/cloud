@@ -48,12 +48,15 @@ with some sample Zed data.
 
 The Brim App can communicate with and switch between different instances
 of Zed lakes, including the local Zed lake it automatically launches
-on `localhost`.  Cloud connections are a bit like Slack's teams, where Slack
+on `localhost`.  Lake connections are a bit like Slack teams, where Slack
 lets you easily switch between teams.
 
 To connect to the cloud from the Brim app, click on the lake dropdown
 in the upper left area of the window where you see the down carrot
-and click on _Add Lake..._.
+and click on _Add Lake..._.  Once the cloud connection has been created,
+you can use this dropdown to switch between your local lake the cloud
+(as well as other cloud lakes or lakes that you set up on your own server
+with `zed lake serve`).
 
 Under the _Name_ input, provide a name for the lake connection that you would like
 appear in listing of available lakes.  Under the Host input, provide the URL
