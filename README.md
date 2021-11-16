@@ -76,11 +76,11 @@ The `zed api` command (or `zapi` for short) lets you
 access all of the functionality exposed to the Brim App on the command line.
 Type `zapi -h` to get online help.
 
-To use the Brim cloud with `zapi`, you can use the `-host` command-line option
+To use the Brim cloud with `zapi`, you can use the `-lake` command-line option
 but for all the examples here, we will use presume you set the
 following environment variable to point at your cloud instance:
 ```
-export ZED_LAKE_HOST=https://<custom>.lake.brimdata.io
+export ZED_LAKE=https://<custom>.lake.brimdata.io
 ```
 > Note that the service is available on the default SSL port rather than
 > the `zed lake serve` default port of 9867.
@@ -99,7 +99,7 @@ Note that `zapi auth` will store your access credentials in `$HOME/.zed/credenti
 Once authenticated, check that the service is working
 by running a `query` command on your "welcome" data:
 ```
-zapi -host <custom>.lake.brimdata.io query "from Welcome"
+zapi -lake <custom>.lake.brimdata.io query "from Welcome"
 ```
 > Note that you can delete the `Welcome` pool at any time.
 > It is just here to help you get started.  You can always
@@ -121,7 +121,7 @@ Run a test by creating a pool, loading data from Python, and reading it back:
 ```
 import zed
 import os
-c = zed.Client(os.environ.get('ZED_LAKE_HOST'))
+c = zed.Client(os.environ.get('ZED_LAKE'))
 c.create_pool('test')
 c.load('test', '{a:1}{a:2}{a:3}')
 for v in c.query('from test'):
