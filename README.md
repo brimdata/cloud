@@ -27,7 +27,7 @@ our clients.
 Your Zed data will be stored in one of our S3 buckets, which we can make
 available to you for direct migration or backup.  You can copy all of the lake data
 to your own domain (e.g., your own S3 bucket or local filesystem) and run your
-own instance of `zed lake serve` to precisely recreate the lake from
+own instance of `zed serve` to precisely recreate the lake from
 the Brim Cloud.
 
 ## Using the Zed Lake
@@ -141,7 +141,7 @@ Compaction is coming soon.
 If you pull very large result sets down into the Python client, the network
 transfer using ZJSON will run much slower than ZNG.  (We plan to add native
 ZNG support to the Python client but it's not yet implemented.)  If you want
-to retrieve large data sets from your Zed lake it's best to use `zapi query`,
+to retrieve large data sets from your Zed lake it's best to use `zed query`,
 which defaults to the ZNG format (unless you send the output to a terminal,
 in which case the textual ZSON format is default).
 
