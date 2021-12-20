@@ -34,7 +34,7 @@ the Brim Cloud.
 
 You can access your Zed lake in the Brim cloud using
 * from your desktop using [the Brim app](#the-brim-app)
-* from the command-line using [zapi CLI command](#the-cli)
+* from the command-line using [zed CLI command](#the-cli)
 * from your Python using our [Python client](#the-python-client)
 
 For the configuration options below, we will assume the host name we provided
@@ -56,7 +56,7 @@ in the upper left area of the window where you see the down carrot
 and click on _Add Lake..._.  Once the cloud connection has been created,
 you can use this dropdown to switch between your local lake the cloud
 (as well as other cloud lakes or lakes that you set up on your own server
-with `zed lake serve`).
+with `zed serve`).
 
 Under the _Name_ input, provide a name for the lake connection that you would like
 appear in listing of available lakes.  Under the Host input, provide the URL
@@ -72,34 +72,37 @@ in the **Queries** panel and selecting _Import from JSON_.
 
 ### The CLI
 
-The `zed api` command (or `zapi` for short) lets you
-access all of the functionality exposed to the Brim App on the command line.
-Type `zapi -h` to get online help.
+The `zed` command lets you access all of the functionality exposed to the Brim
+App on the command line. Type `zed -h` to get online help.
 
-To use the Brim cloud with `zapi`, you can use the `-host` command-line option
+The quickest way to get the `zed` cli on macOS, Linux, or Windows is to download
+a pre-built release binary. You can find these binaries on the [GitHub releases](https://github.com/brimdata/zed/releases)
+page.
+
+To use the Brim cloud with `zed`, you can use the `-lake` command-line option
 but for all the examples here, we will use presume you set the
 following environment variable to point at your cloud instance:
 ```
-export ZED_LAKE_HOST=https://<custom>.lake.brimdata.io
+export ZED_LAKE=https://<custom>.lake.brimdata.io
 ```
 > Note that the service is available on the default SSL port rather than
-> the `zed lake serve` default port of 9867.
+> the `zed serve` default port of 9867.
 
-Authenticate your lake connection using `zapi auth log`:
+Authenticate your lake connection using `zed auth login`:
 ```
-zapi auth login
+zed auth login
 ```
 This will launch your browser with an authentication dialogue pointing
 at the auth0 service for Brim and command will print an confirmation code
-on the terminal.  Once you confirm in the auth0 web dialogue, `zapi auth log`
+on the terminal.  Once you confirm in the auth0 web dialogue, `zed auth login`
 will report success and you will be logged in.
 
-Note that `zapi auth` will store your access credentials in `$HOME/.zed/credentials.json`.
+Note that `zed auth login` will store your access credentials in `$HOME/.zed/credentials.json`.
 
 Once authenticated, check that the service is working
 by running a `query` command on your "welcome" data:
 ```
-zapi -host <custom>.lake.brimdata.io query "from Welcome"
+zed query "from Welcome"
 ```
 > Note that you can delete the `Welcome` pool at any time.
 > It is just here to help you get started.  You can always
@@ -110,7 +113,7 @@ zapi -host <custom>.lake.brimdata.io query "from Welcome"
 ### The Python Client
 
 To access your lake via the Python client, first authenticate as described
-above using `zapi auth login` as the Python client requires access to your login
+above using `zed auth login` as the Python client requires access to your login
 credentials stored in `$HOME/.zed/credentials.json`.
 
 If you haven't installed the Python `zed` module, run
@@ -121,7 +124,7 @@ Run a test by creating a pool, loading data from Python, and reading it back:
 ```
 import zed
 import os
-c = zed.Client(os.environ.get('ZED_LAKE_HOST'))
+c = zed.Client(os.environ.get('ZED_LAKE'))
 c.create_pool('test')
 c.load('test', '{a:1}{a:2}{a:3}')
 for v in c.query('from test'):
