@@ -34,7 +34,7 @@ the Brim Cloud.
 
 You can access your Zed lake in the Brim cloud using
 * from your desktop using [the Brim app](#the-brim-app)
-* from the command-line using [zed CLI command](#the-cli)
+* from the command-line using [`zed` CLI command](#the-cli)
 * from your Python using our [Python client](#the-python-client)
 
 For the configuration options below, we will assume the host name we provided
