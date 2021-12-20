@@ -75,9 +75,8 @@ in the **Queries** panel and selecting _Import from JSON_.
 The `zed` command lets you access all of the functionality exposed to the Brim
 App on the command line. Type `zed -h` to get online help.
 
-The quickest way to get the `zed` cli on macOS, Linux, or Windows is to download
-a pre-built release binary. You can find these binaries on the [GitHub releases](https://github.com/brimdata/zed/releases)
-page.
+The quickest way to get the `zed` command on macOS, Linux, or Windows is to [download
+a pre-built release](https://github.com/brimdata/zed/releases).
 
 To use the Brim cloud with `zed`, you can use the `-lake` command-line option
 but for all the examples here, we will use presume you set the
