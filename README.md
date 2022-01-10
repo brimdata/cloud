@@ -64,7 +64,7 @@ of the lake service, in this case, `https://<custom>.lake.brimdata.io`
 
 You can import some sample queries relevant to the Welcome pools
 into the app's query library by
-downloading [queries.json](./queries.json).
+downloading [queries.json](./queries.json?raw=1).
 You can simply drag this file onto the **Queries** panel in the Brim app
 and this will add a query folder called "Welcome".
 You may also import this file by clicking on the `+` button
