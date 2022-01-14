@@ -54,17 +54,17 @@ lets you easily switch between teams.
 To connect to the cloud from the Brim app, click on the lake dropdown
 in the upper left area of the window where you see the down carrot
 and click on _Add Lake..._.  Once the cloud connection has been created,
-you can use this dropdown to switch between your local lake the cloud
+you can use this dropdown to switch between your local lake and the cloud
 (as well as other cloud lakes or lakes that you set up on your own server
 with `zed serve`).
 
-Under the _Name_ input, provide a name for the lake connection that you would like
+Under the _Name_ input, provide a name for the lake connection that you would like to
 appear in listing of available lakes.  Under the Host input, provide the URL
 of the lake service, in this case, `https://<custom>.lake.brimdata.io`
 
 You can import some sample queries relevant to the Welcome pools
 into the app's query library by
-downloading [queries.json](./queries.json).
+downloading [queries.json](./queries.json?raw=1).
 You can simply drag this file onto the **Queries** panel in the Brim app
 and this will add a query folder called "Welcome".
 You may also import this file by clicking on the `+` button
@@ -92,7 +92,7 @@ Authenticate your lake connection using `zed auth login`:
 zed auth login
 ```
 This will launch your browser with an authentication dialogue pointing
-at the auth0 service for Brim and command will print an confirmation code
+at the auth0 service for Brim and command will print a confirmation code
 on the terminal.  Once you confirm in the auth0 web dialogue, `zed auth login`
 will report success and you will be logged in.
 
